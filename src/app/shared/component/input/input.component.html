@@ -1,0 +1,11 @@
+<!-- Form -->
+<form class="row mt-3 d-flex" [formGroup]="form" (ngSubmit)="sendData()">
+  <div class="input-group col-12">
+    <div class="form-floating col-10">
+      <input type="text" name="infijo" id="infijo" class="form-control" placeholder="Expresión InFijo"
+        required="true" formControlName="inputInfijo" (keydown)="keyDown($event)">
+      <label for="correo" class="texto-black">Expresión InFijo</label>
+    </div>
+    <button class="col-2 btn btn-warning fw-bold" type="submit">Ejecutar</button>
+  </div>
+</form>

@@ -1,0 +1,32 @@
+<div class="col-12 mt-3">
+  <div class="tableConfig">
+      <table class="table table-bordered text-center">
+          <thead class="table-dark texto-white">
+              <tr>
+                  <th (click)="navItemSelected = 0" [ngClass]="navItemSelected==0 ? 'bg-success' : ''">PosFija</th>
+                  <th (click)="navItemSelected = 1" [ngClass]="navItemSelected==1 ? 'bg-success' : ''">PreFija</th>
+              </tr>
+          </thead>
+          <tbody style="overflow-y:auto;" class="texto-white">
+            <td>{{resultValue[0]}}</td>
+            <td>{{resultValue[1]}}</td>
+          </tbody>
+      </table>
+      <table class="table table-bordered text-center" >
+        <thead class="table-dark texto-white">
+            <tr>
+                <th>Elemento</th>
+                <th>Pila</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody style="overflow-y:auto;" class="texto-white">
+          <tr *ngFor="let item of getTable()">
+            <td>{{item.value}}</td>
+            <td>{{item.pila}}</td>
+            <td>{{item.result}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
